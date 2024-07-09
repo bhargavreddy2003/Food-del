@@ -1,0 +1,56 @@
+:root {
+  --header-color: #98fb98;
+  --bg-color: #f0f0f0;
+  --btn-links-colr: #ffdab9;
+}
+.navbar {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  width: 150px;
+}
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: var(--btn-links-colr);
+  cursor: pointer;
+  font-size: 18px;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.navbar button {
+  background-color: transparent;
+  font-size: 16px;
+  color: var(--btn-links-colr);
+  border: 1px solid var(--btn-links-colr);
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.navbar button:hover {
+  background-color: var(--bg-color);
+}
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
+}
+.navbar-search-icon {
+  position: relative;
+}
+.navbar-search-icon .dot {
+  position: absolute;
+  min-height: 10px;
+  min-width: 10px;
+  background-color: var(--header-color);
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+}
