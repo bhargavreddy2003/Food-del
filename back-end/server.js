@@ -15,6 +15,7 @@ connectDB();
 
 //creating api endpoint for food routes
 App.use("/api/food", foodRouter);
+App.use("/images", express.static("Uploads")); // servers files inside uploads directory
 //-----------------------------//
 
 App.get("/", (req, res) => {

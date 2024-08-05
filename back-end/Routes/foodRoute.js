@@ -1,5 +1,9 @@
 import express from "express";
-import { addFood } from "../controllers/foodController.js";
+import {
+  addFood,
+  listFood,
+  removeFood,
+} from "../controllers/foodController.js";
 import multer from "multer"; // to create image storage
 
 const foodRouter = express.Router();
@@ -14,5 +18,6 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage }); // using this upload we can store image in upload folder in the storage
 
 foodRouter.post("/add", upload.single("image"), addFood); //we use the upload storage that creaded by multer to store image , on the api-end point "/add"
-
+foodRouter.get("/list", listFood);
+foodRouter.post("/remove", removeFood);
 export default foodRouter;
